@@ -153,7 +153,7 @@ class Errbit {
 
 		$config = array_merge($this->_config, $options);
 
-		$sock = fsockopen(
+		$sock = @fsockopen(
 			$this->_buildTcpScheme($config),
 			$config['port'],
 			$errno, $errstr,
